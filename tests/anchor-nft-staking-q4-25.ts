@@ -11,7 +11,7 @@ describe("anchor-nft-staking-q4-25", () => {
   anchor.setProvider(provider);
 
   const program = anchor.workspace
-    .anchorNftStakingQ425 as Program<AnchorNftStakingQ425>;
+    .AnchorNftStakingQ425 as Program<AnchorNftStakingQ425>;
   const connection = provider.connection;
 
   // Accounts

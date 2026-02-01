@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-anchor_nft_staking_q4_25 = "YFbRgpLHGbKisGA8GYY1ToRH1tAD4ZRLaRvFwHYkoot"
+anchor_nft_staking_q4_25 = "H8iK9s92tNAfkiJ1iLVyryoW5tshp8DRCgCkRzQ9K3AP"
 
 [registry]
 url = "https://api.apr.dev"
@@ -17,3 +17,4 @@ wallet = "~/.config/solana/id.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""
+

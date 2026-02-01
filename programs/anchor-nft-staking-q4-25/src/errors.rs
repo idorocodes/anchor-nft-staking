@@ -2,6 +2,8 @@ use anchor_lang::error_code;
 
 #[error_code]
 pub enum StakeError {
+    #[msg("No points")]
+    NoPoints,
     #[msg("Max Stake Reached")]
     MaxStakeReached,
     #[msg("Freeze Time Not Passed")]
