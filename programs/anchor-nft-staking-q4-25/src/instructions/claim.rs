@@ -51,7 +51,10 @@ impl<'info> Claim<'info> {
     pub fn claim(&mut self) -> Result<()> {
         require!(self.user_account.points > 0, StakeError::NoPoints);
 
-        let amount = self.user_account.points as f64 * 10e6;
+        let points = self.user_account.points;
+        let mint_decimals = self.reward_mint.decimals;
+        
+         let amount = (points as u64).saturating_mul(10u64.pow(mint_decimals as u32));
         let mint_to_accounts = MintTo {
             mint: self.reward_mint.to_account_info(),
             to: self.rewards_ata.to_account_info(),
